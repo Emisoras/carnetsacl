@@ -284,9 +284,32 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      <footer className="mt-16 text-slate-400 text-[10px] no-print font-bold uppercase tracking-widest">
-        &copy; {new Date().getFullYear()} Asociación Colombiana de Locutores y Comunicadores
-      </footer>
+<footer className="mt-16 text-slate-400 text-[10px] no-print font-bold uppercase tracking-widest text-center space-y-1">
+  <div>
+    &copy; {new Date().getFullYear()} Asociación Colombiana de Locutores y Comunicadores
+  </div>
+
+  <div>
+    UN PRODUCTO DE{' '}
+    <a
+      href="https://www.tuvozenmivoz.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-red-700 hover:text-red-900 underline underline-offset-2"
+    >
+      Tu Voz en Mi Voz
+    </a>{' '}
+    Y DE{' '}
+    <a
+      href="https://www.emisorasdelmundo.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-red-700 hover:text-red-900 underline underline-offset-2"
+    >
+      Emisoras del Mundo
+    </a>
+  </div>
+</footer>
     </div>
   );
 };

@@ -70,7 +70,7 @@ const CardFront: React.FC<Props> = ({ data }) => {
             src={data.photoUrl} 
             crossOrigin="anonymous"
             alt="Profile" 
-            className="w-full h-full object-cover origin-center transition-transform duration-100"
+            className="w-full h-full object-contain origin-center transition-transform duration-100"
             style={{ 
               transform: `scale(${data.photoScale}) translate(${data.photoX}%, ${data.photoY}%)` 
             }}

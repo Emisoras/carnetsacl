@@ -35,7 +35,7 @@ export const DEFAULT_DATA: AffiliateData = {
   documentNumber: "00.000.000",
   affiliateNumber: "0000",
   photoUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&auto=format&fit=crop",
-  photoScale: 1,
+  photoScale: 1.1,
   photoX: 0,
   photoY: 0,
   logoUrl: null,
