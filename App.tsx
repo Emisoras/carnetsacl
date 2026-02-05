@@ -170,6 +170,9 @@ const App: React.FC = () => {
         <h1 className="text-4xl font-brand font-black text-slate-900 tracking-tight">
           Carné Digital <span className="text-red-800">ACL</span>
         </h1>
+        <h1 className="text-2xl font-brand font-black text-slate-900 tracking-tight">
+          Asociación Colombiana de Locutores y Comunicadores
+        </h1>
         <p className="text-slate-500 font-medium mt-1">Generador de Identidad para Locutores y Comunicadores</p>
       </header>
 

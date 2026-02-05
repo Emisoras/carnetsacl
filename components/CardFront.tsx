@@ -86,9 +86,11 @@ const CardFront: React.FC<Props> = ({ data }) => {
             <span className="text-gray-800">{data.lastName}</span>
           </h2>
           <div className="h-1 w-8 bg-red-700 mx-auto my-1.5 rounded-full"></div>
-          <p className="text-[11px] font-bold text-gray-500 tracking-widest uppercase">
-            C.C. {data.documentNumber}
-          </p>
+          {data.showDocumentNumber && (
+            <p className="text-[11px] font-bold text-gray-500 tracking-widest uppercase">
+              C.C. {data.documentNumber}
+            </p>
+          )}
         </div>
         
         {/* Affiliate Number Box */}

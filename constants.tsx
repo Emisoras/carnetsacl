@@ -46,6 +46,9 @@ export const DEFAULT_DATA: AffiliateData = {
   validUntil: "31/12/2027",
   presidentSignatureUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Signature_of_John_Hancock.svg",
   presidentName: "HUMBERTO RODRÍGUEZ CALDERÓN",
+  // Visibilidad de datos en frente
+  showDocumentNumber: true,
+  // Bloqueos
   lockLogo: false,
   lockWatermark: false,
   lockWatermarkOpacity: false,

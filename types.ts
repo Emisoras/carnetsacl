@@ -16,6 +16,8 @@ export interface AffiliateData {
   validUntil: string;
   presidentSignatureUrl: string;
   presidentName: string;
+  // Control de visibilidad
+  showDocumentNumber: boolean;
   // Bloqueos independientes
   lockLogo: boolean;
   lockWatermark: boolean;

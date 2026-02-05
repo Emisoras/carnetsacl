@@ -13,9 +13,9 @@ interface Props {
 
 const Editor: React.FC<Props> = ({ data, onChange, onExport, exportProgress, exportStatus, onExportPdf }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type } = e.target;
-    const val = type === 'range' ? parseFloat(value) : value;
-    onChange({ ...data, [name]: val });
+    const { name, value, type } = e.target as HTMLInputElement;
+    const val = type === 'range' ? parseFloat(value) : (type === 'checkbox' ? (e.target as HTMLInputElement).checked : value);
+    onChange({ ...data, [name]: val as any });
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, field: keyof AffiliateData, lockField: keyof AffiliateData) => {
@@ -197,8 +197,20 @@ const Editor: React.FC<Props> = ({ data, onChange, onExport, exportProgress, exp
             name="documentNumber" 
             value={data.documentNumber} 
             onChange={handleChange}
-            className="w-full border p-2 rounded-lg text-sm bg-gray-50 outline-none focus:ring-1 focus:ring-red-800"
+            disabled={!data.showDocumentNumber}
+            placeholder="00.000.000"
+            className={`w-full border p-2 rounded-lg text-sm bg-gray-50 outline-none focus:ring-1 focus:ring-red-800 ${!data.showDocumentNumber ? 'opacity-50 cursor-not-allowed' : ''}`}
           />
+          <label className="mt-2 flex items-center gap-2 text-[10px] font-bold text-gray-600 uppercase">
+            <input
+              type="checkbox"
+              name="showDocumentNumber"
+              checked={data.showDocumentNumber}
+              onChange={handleChange}
+              className="h-4 w-4 accent-red-800"
+            />
+            Mostrar C.C. en el frente
+          </label>
         </div>
         <div className="col-span-1">
           <label className="block text-[11px] font-bold text-gray-500 uppercase mb-1">Afiliado N°</label>
